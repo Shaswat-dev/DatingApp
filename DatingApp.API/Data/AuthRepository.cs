@@ -22,7 +22,7 @@ namespace DatingApp.API.Data
            if(VerifyPasswordHash(password,user.PasswordHash, user.PasswordSalt ))
                 return user;
 
-            return user;
+            return null;
         }
 
         private bool VerifyPasswordHash(string password, byte[] passwordHash, byte[] passwordSalt)
